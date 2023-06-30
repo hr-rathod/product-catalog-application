@@ -1,0 +1,33 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "Samsung Universe 9",
+      "shortDescription": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "rating": 4.09,
+      "image": [
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "OPPOF19",
+      "shortDescription": "OPPO F19 is officially announced on April 2021.",
+      "price": 280,
+      "rating": 4.3,
+      "image": [
+        "https://i.dummyjson.com/data/products/4/1.jpg"
+      ]
+    },
+    {
+      "name": "Automatic Irrigation System",
+      "shortDescription": "testibg",
+      "description": "testing",
+      "price": "2.5",
+      "image": "https://www.ifoneint.com/upload/product/Universal%20001.1657624023.jpg",
+      "rating": "5",
+      "id": 12
+    }
+  ]
+}
