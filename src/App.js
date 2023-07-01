@@ -1,5 +1,5 @@
 
-import Sidebar from './components/sideBar/SideBar';
+import Header from './components/header/Header';
 import ProductList from './components/product list/ProductList';
 import ProductDetail from './components/product detail/ProductDetail';
 import * as ReactDOM from 'react-dom'
@@ -12,7 +12,7 @@ import './App.css';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Sidebar/>,
+    element: <Header/>,
     children : [{
       path : "/",
       element: <ProductList/>,

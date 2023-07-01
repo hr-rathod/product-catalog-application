@@ -1,33 +1,238 @@
 {
   "products": [
     {
-      "id": 3,
-      "name": "Samsung Universe 9",
-      "shortDescription": "Samsung's new variant which goes beyond Galaxy to the Universe",
-      "price": 1249,
-      "rating": 4.09,
-      "image": [
-        "https://i.dummyjson.com/data/products/3/1.jpg"
-      ]
+      "id": 2,
+      "name": "iPhone 13 Pro",
+      "shortDescription": "The latest Pro model from Apple.",
+      "description": "The iPhone 13 Pro is Apple's flagship device with a stunning Super Retina XDR display and an ultra-powerful A15 Bionic chip. It features a triple-camera system with advanced computational photography capabilities. With its premium design, Face ID, and extensive storage options, the iPhone 13 Pro sets new standards for smartphones.",
+      "price": "1,19,9000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSumxOyZGOJegeKKJ2bGI3aRtISt7FhtDm7Y87QajwmOTrSptm0sta64v0bIIcEVPnJVn4&usqp=CAU",
+      "rating": 4.9
     },
     {
-      "id": 4,
-      "name": "OPPOF19",
-      "shortDescription": "OPPO F19 is officially announced on April 2021.",
-      "price": 280,
-      "rating": 4.3,
-      "image": [
-        "https://i.dummyjson.com/data/products/4/1.jpg"
-      ]
+      "id": 9,
+      "name": "Vivo X60 Pro",
+      "shortDescription": "A smartphone with advanced camera capabilities.",
+      "description": "The Vivo X60 Pro features a partnership with ZEISS for its camera system, delivering exceptional photography performance. It comes with a 48MP main sensor and features innovative image stabilization technology. With its sleek design, powerful processor, and vibrant display, the Vivo X60 Pro is a solid choice for photography enthusiasts.",
+      "price": "49,99",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFcgV8XSPD0vC3bpE_mclCFxN8SwyWDeVqTA&usqp=CAU",
+      "rating": 4.6
     },
     {
-      "name": "Automatic Irrigation System",
-      "shortDescription": "testibg",
-      "description": "testing",
-      "price": "2.5",
-      "image": "https://www.ifoneint.com/upload/product/Universal%20001.1657624023.jpg",
-      "rating": "5",
-      "id": 12
+      "id": 10,
+      "name": "Oppo Find X3 Pro",
+      "shortDescription": "A flagship smartphone with a stunning display.",
+      "description": "The Oppo Find X3 Pro boasts a vibrant and high-refresh-rate display that enhances the viewing experience. It features a powerful Snapdragon 888 processor and a versatile quad-camera system. With its sleek design, advanced camera capabilities, and fast charging support, the Oppo Find X3 Pro offers a premium smartphone experience.",
+      "price": "1,29,990",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoIYFJa9YNn4qfK_dcD9o8Z8fALJBdF21U4AsDPrf6l5q1ob_LY998WIB2J8uHfb4Rf-8&usqp=CAU",
+      "rating": 4.7
+    },
+    {
+      "id": 6,
+      "name": "Sony Xperia 1 III",
+      "shortDescription": "A smartphone designed for multimedia enthusiasts.",
+      "description": "The Sony Xperia 1 III offers a stunning 4K OLED display and a powerful Snapdragon 888 processor. It features a triple-camera system developed in collaboration with Sony's Alpha camera engineers, delivering exceptional photography capabilities. With its audio enhancements and 5G connectivity, the Xperia 1 III is a multimedia powerhouse.",
+      "price": "1,24,990",
+      "image": "https://www.notebookcheck.net/fileadmin/Notebooks/Sony/Xperia_1_III/2509130_n0.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 8,
+      "name": "Realme 8 Pro",
+      "shortDescription": "A  smartphone with excellent camera capabilities.",
+      "description": "The Realme 8 Pro offers great value for money with its impressive camera setup and attractive design. It features a 108MP primary camera sensor, enabling you to capture high-resolution photos with rich details. With its AMOLED display and fast charging support, the Realme 8 Pro is an ideal choice for budget-conscious photography enthusiasts.",
+      "price": "17,999",
+      "image": "https://d2xamzlzrdbdbn.cloudfront.net/products/b944b09f-8406-4cc0-b6d7-896700804691.jpg",
+      "rating": "https://d2xamzlzrdbdbn.cloudfront.net/products/b944b09f-8406-4cc0-b6d7-896700804691.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Vivo X60 Pro",
+      "shortDescription": "A smartphone with advanced camera capabilities.",
+      "description": "The Vivo X60 Pro features a partnership with ZEISS for its camera system, delivering exceptional photography performance. It comes with a 48MP main sensor and features innovative image stabilization technology. With its sleek design, powerful processor, and vibrant display, the Vivo X60 Pro is a solid choice for photography enthusiasts.",
+      "price": "49,990",
+      "image": "https://www.example.com/vivo-x60-pro.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 10,
+      "name": "Oppo Find X3 Pro",
+      "shortDescription": "A flagship smartphone with a stunning display.",
+      "description": "The Oppo Find X3 Pro boasts a vibrant and high-refresh-rate display that enhances the viewing experience. It features a powerful Snapdragon 888 processor and a versatile quad-camera system. With its sleek design, advanced camera capabilities, and fast charging support, the Oppo Find X3 Pro offers a premium smartphone experience.",
+      "price": "1,29,990",
+      "image": "https://www.example.com/oppo-find-x3-pro.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 11,
+      "name": "iPhone SE (2020)",
+      "shortDescription": "A compact iPhone with powerful performance.",
+      "description": "The iPhone SE (2020) combines the power of the latest A13 Bionic chip with the iconic design of the iPhone 8. It features a 4.7-inch Retina HD display and a single-camera system that delivers impressive photography results. With its affordable price point and compact size, the iPhone SE (2020) appeals to those seeking a budget-friendly iPhone experience.",
+      "price": "29,999",
+      "image": "https://www.example.com/iphone-se-2020.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 12,
+      "name": "Samsung Galaxy Note 20 Ultra",
+      "shortDescription": "A feature-rich smartphone with a stylus.",
+      "description": "The Samsung Galaxy Note 20 Ultra is a powerhouse device with a stunning display and an S Pen stylus. It features a large Dynamic AMOLED display, a powerful Exynos 990 processor, and a versatile triple-camera system. With its productivity-enhancing features and premium design, the Galaxy Note 20 Ultra is an ideal choice for professionals.",
+      "price": "1,04,999",
+      "image": "https://www.example.com/samsung-galaxy-note-20-ultra.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 13,
+      "name": "Google Pixel 5",
+      "shortDescription": "A compact and capable smartphone.",
+      "description": "The Google Pixel 5 offers a compact and comfortable design with a 6-inch OLED display. It features a powerful Snapdragon 765G processor and a dual-camera system that delivers impressive photography results. With its clean Android experience and guaranteed software updates, the Pixel 5 is a reliable choice for those seeking a pure Google experience.",
+      "price": "47,999",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFcgV8XSPD0vC3bpE_mclCFxN8SwyWDeVqTA&usqp=CAU",
+      "rating": 4.5
+    },
+    {
+      "id": 14,
+      "name": "OnePlus 9",
+      "shortDescription": "A flagship smartphone with Hasselblad partnership.",
+      "description": "The OnePlus 9 combines a sleek design with top-of-the-line hardware and software features. It features a 6.55-inch Fluid AMOLED display, a Snapdragon 888 processor, and a triple-camera system co-developed with Hasselblad. With its fast charging capabilities and OxygenOS software, the OnePlus 9 offers a flagship-level smartphone experience.",
+      "price": "49,999",
+      "image": "https://www.example.com/oneplus-9.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 15,
+      "name": "Xiaomi Mi 11X Pro",
+      "shortDescription": "A powerful smartphone at an affordable price.",
+      "description": "The Xiaomi Mi 11X Pro offers flagship-level performance without breaking the bank. It features a Snapdragon 888 processor, a vibrant Super AMOLED display, and a versatile triple-camera system. With its 5G capabilities and fast charging support, the Mi 11X Pro is a solid choice for tech enthusiasts on a budget.",
+      "price": "39,999",
+      "image": "https://www.example.com/xiaomi-mi-11x-pro.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 16,
+      "name": "Sony Xperia 5 III",
+      "shortDescription": "A compact smartphone with powerful features.",
+      "description": "The Sony Xperia 5 III packs a punch with its compact form factor and impressive performance. It features a 6.1-inch OLED display, a Snapdragon 888 processor, and a triple-camera system developed in collaboration with Sony's Alpha camera engineers. With its 5G capabilities and audio enhancements, the Xperia 5 III offers a premium smartphone experience.",
+      "price": "79,990",
+      "image": "https://www.example.com/sony-xperia-5-iii.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": 17,
+      "name": "LG Velvet",
+      "shortDescription": "A stylish smartphone with a unique design.",
+      "description": "The LG Velvet stands out with its stylish and ergonomic design. It features a 6.8-inch P-OLED display, a Snapdragon 765G processor, and a versatile triple-camera system. With its 5G capabilities and Dual Screen accessory support, the LG Velvet offers a differentiated smartphone experience.",
+      "price": "36,990",
+      "image": "https://www.example.com/lg-velvet.jpg",
+      "rating": 4.4
+    },
+    {
+      "id": 18,
+      "name": "Realme X7 Pro",
+      "shortDescription": "A mid-range smartphone with powerful performance.",
+      "description": "The Realme X7 Pro offers impressive performance and features at an affordable price point. It features a 6.55-inch Super AMOLED display, a MediaTek Dimensity 1000+ processor, and a quad-camera system. With its 5G capabilities and fast charging support, the Realme X7 Pro is a great option for those seeking a balance between performance and value.",
+      "price": "24,999",
+      "image": "https://www.example.com/realme-x7-pro.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 19,
+      "name": "Vivo V21",
+      "shortDescription": "A selfie-focused smartphone with a sleek design.",
+      "description": "The Vivo V21 is designed for selfie enthusiasts, featuring a high-resolution front camera and advanced selfie features. It also boasts a 6.44-inch AMOLED display, a MediaTek Dimensity 800U processor, and a versatile triple-camera system. With its slim profile and 5G capabilities, the Vivo V21 is a stylish and capable smartphone.",
+      "price": "29,990",
+      "image": "https://www.example.com/vivo-v21.jpg",
+      "rating": 4.3
+    },
+    {
+      "id": 20,
+      "name": "Oppo Reno 5 Pro+",
+      "shortDescription": "A premium smartphone with excellent camera capabilities.",
+      "description": "The Oppo Reno 5 Pro+ combines a sleek design with powerful camera features. It features a 6.55-inch AMOLED display, a Snapdragon 865 processor, and a quad-camera system that includes a 50MP Sony IMX766 sensor. With its fast charging support and 5G capabilities, the Reno 5 Pro+ offers a premium smartphone experience.",
+      "price": "39,990",
+      "image": "https://www.example.com/oppo-reno-5-pro-plus.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 21,
+      "name": "iPhone 12",
+      "shortDescription": "A flagship iPhone with a powerful processor.",
+      "description": "The iPhone 12 features a sleek design and a powerful A14 Bionic chip. It comes with a 6.1-inch Super Retina XDR display, a dual-camera system, and 5G capabilities. With its MagSafe support and iOS ecosystem, the iPhone 12 offers a premium smartphone experience.",
+      "price": "71,490",
+      "image": "https://www.example.com/iphone-12.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 22,
+      "name": "Samsung Galaxy A52",
+      "shortDescription": "A mid-range smartphone with a versatile camera system.",
+      "description": "The Samsung Galaxy A52 offers a balanced combination of features and affordability. It features a 6.5-inch Super AMOLED display, a Snapdragon 720G processor, and a quad-camera system. With its IP67 water and dust resistance rating, the Galaxy A52 is a reliable companion for everyday use.",
+      "price": "26,499",
+      "image": "https://www.example.com/samsung-galaxy-a52.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 23,
+      "name": "Google Pixel 4a",
+      "shortDescription": "A budget-friendly smartphone with a great camera.",
+      "description": "The Google Pixel 4a offers an exceptional camera experience at an affordable price. It features a 5.81-inch OLED display, a Snapdragon 730G processor, and a single-camera system that delivers impressive photography results. With its clean Android experience and guaranteed software updates, the Pixel 4a is a solid choice for budget-conscious users.",
+      "price": "31,999",
+      "image": "https://www.example.com/google-pixel-4a.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 24,
+      "name": "OnePlus Nord 2",
+      "shortDescription": "A mid-range smartphone with flagship-level performance.",
+      "description": "The OnePlus Nord 2 offers flagship-level performance at a more affordable price point. It features a 6.43-inch Fluid AMOLED display, a MediaTek Dimensity 1200-AI processor, and a versatile triple-camera system. With its fast charging capabilities and OxygenOS software, the OnePlus Nord 2 delivers a premium smartphone experience.",
+      "price": "29,999",
+      "image": "https://www.example.com/oneplus-nord-2.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 25,
+      "name": "Xiaomi Redmi Note 10 Pro",
+      "shortDescription": "A feature-packed smartphone at an affordable price.",
+      "description": "The Xiaomi Redmi Note 10 Pro offers a feature-packed smartphone experience without breaking the bank. It features a 6.67-inch Super AMOLED display, a Snapdragon 732G processor, and a quad-camera system. With its large battery and fast charging support, the Redmi Note 10 Pro is a reliable choice for everyday use.",
+      "price": "17,999",
+      "image": "https://www.example.com/xiaomi-redmi-note-10-pro.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": 26,
+      "name": "Sony Xperia 10 III",
+      "shortDescription": "A mid-range smartphone with a compact design.",
+      "description": "The Sony Xperia 10 III offers a compact design and solid performance. It features a 6-inch OLED display, a Snapdragon 690 processor, and a triple-camera system. With its water and dust resistance rating and audio enhancements, the Xperia 10 III is a reliable and versatile smartphone.",
+      "price": "24,990",
+      "image": "https://www.example.com/sony-xperia-10-iii.jpg",
+      "rating": 4.3
+    },
+    {
+      "id": 27,
+      "name": "LG Q70",
+      "shortDescription": "A mid-range smartphone with a durable build.",
+      "description": "The LG Q70 is designed for durability, featuring MIL-STD-810G compliance and IP68 water and dust resistance rating. It offers a 6.4-inch FHD+ display, a Snapdragon 675 processor, and a triple-camera system. With its large battery and expandable storage, the LG Q70 is a reliable companion for outdoor activities.",
+      "price": "22,990",
+      "image": "https://www.example.com/lg-q70.jpg",
+      "rating": 4.2
+    },
+    {
+      "id": 28,
+      "name": "Realme Narzo 30 Pro",
+      "shortDescription": "An affordable 5G smartphone with impressive performance.",
+      "description": "The Realme Narzo 30 Pro offers 5G capabilities at an affordable price point. It features a 6.5-inch IPS LCD display, a MediaTek Dimensity 800U processor, and a triple-camera system. With its large battery and fast charging support, the Narzo 30 Pro is a great choice for users looking for a budget-friendly 5G smartphone.",
+      "price": "15,999",
+      "image": "https://www.example.com/realme-narzo-30-pro.jpg",
+      "rating": 4.4
+    },
+    {
+      "id": 29,
+      "name": "Vivo Y72 5G",
+      "shortDescription": "An affordable 5G smartphone with a large display.",
+      "description": "The Vivo Y72 5G offers an affordable 5G smartphone experience with its large 6.58-inch IPS LCD display. It features a MediaTek Dimensity 700 processor and a dual-camera system. With its large battery and 5G capabilities, the Y72 5G is a reliable and affordable choice for users looking to experience the benefits of 5G connectivity.",
+      "price": "20,990",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFcgV8XSPD0vC3bpE_mclCFxN8SwyWDeVqTA&usqp=CAU",
+      "rating": 4.2
     }
   ]
 }

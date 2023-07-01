@@ -1,166 +1,78 @@
 import React, { useState, useEffect } from 'react';
-import "./productList.css"
-import Modal from 'react-bootstrap/Modal';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import axios from 'axios';
-import Collapse from 'react-bootstrap/Collapse';
+import './productList.css';
 import AddProduct from './AddProduct';
+import { fetchProducts, deleteProduct, updateProduct } from '../../API/api';
 
-
+import { Link } from 'react-router-dom';
+import EditModal from './EditModal';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [editedProduct, setEditedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(5);
 
   useEffect(() => {
-    fetchProducts();
+    fetchProductsData();
   }, []);
 
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get('http://localhost:3001/products');
-      setProducts(response.data);
-    } catch (error) {
-      console.error('Error fetching products:', error);
-    }
+  const fetchProductsData = async () => {
+    const productsData = await fetchProducts();
+    setProducts(productsData);
   };
 
   const handleDelete = async (productId) => {
-    try {
-      await axios.delete(`http://localhost:3001/products/${productId}`);
-      fetchProducts();
-    } catch (error) {
-      console.error('Error deleting product:', error);
-    }
+    await deleteProduct(productId);
+    fetchProductsData();
   };
 
+  const handleEdit = (product) => {
+    setSelectedProduct(product);
+    setEditedProduct({ ...product });
+  };
 
- const [selectedProduct, setSelectedProduct] = useState("")
+  const handleChange = (e) => {
+    setEditedProduct({ ...editedProduct, [e.target.name]: e.target.value });
+  };
 
+  const handleSave = async () => {
+    await updateProduct(selectedProduct.id, editedProduct);
+    fetchProductsData();
+    handleEdit(null);
+  };
 
- const [show, setShow] = useState(false);
+  // Calculate pagination
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
 
- const handleClose = () => setShow(false);
- const handleShow = () => setShow(true);
-
-
- const [value, setValue] = useState({})
-
- useEffect(() => {
-  setValue({
-      name: products.name,
-      shortDescription: products.shortDescription,
-      description: products.description,
-      price: products.price,
-      rating: products.rating,
-      imgURL: products.imageURL
-  })
-}, [])
-
-
-
- const handleChange = (e) => {
-  e.preventDefault();
-  setValue({ ...value, [e.target.name]: e.target.value })
-}
-
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div>
+      {/* Edit product */}
+      <EditModal
+        show={Boolean(selectedProduct)}
+        handleClose={() => handleEdit(null)}
+        editedProduct={editedProduct}
+        handleChange={handleChange}
+        handleSave={handleSave}
+      />
 
+      {/* Add Product */}
+      <AddProduct fetchProducts={fetchProductsData} />
 
-{/* edit product */}
-
-
-<div>
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Add New Product</Modal.Title>
-                </Modal.Header>
-
-                <form className='form-group'>
-                    <Modal.Body>
-
-
-                        <label for="name">Product Name</label>
-                        <input
-                            type='text'
-                            id='name'
-                            // value={selectedProduct.product.name}
-                            className='form-control'
-                            placeholder='Name'
-                            onChange={handleChange}
-                           
-                        />
-
-                        <label for="shortDescrip">Product Short Description</label>
-                        <input
-                        type='text'
-                            id='shortDescrip'
-                            className='form-control'
-                            placeholder='Enter Short Description'
-                            onChange={handleChange}
-                        />
-
-                        <label for="Descrip">Product Description</label>
-                        <textarea
-                        type='text'
-                            id='Descrip'
-                            className='form-control'
-                            placeholder='Enter Description'
-                            onChange={handleChange}
-                           
-                        />
-
-                        <label for="price">Product Price</label>
-                        <input
-                            id='price'
-                            className='form-control'
-                            placeholder='Enter Price'
-                            onChange={handleChange}
-                            
-                        />
-
-                        <label for="img">Product Image URl</label>
-                        <input
-                            id='img'
-                            className='form-control'
-                            placeholder='Enter Image URl'
-                           
-                        />
-
-                        <label for="rating">Product Rating</label>
-                        <input
-                            id='rating'
-                            className='form-control'
-                            placeholder='Enter Rating'
-                          
-                        />
-                    </Modal.Body>
-                    <Modal.Footer>
-                       
-                        <Button style={{width: "150px"}} variant="success" >
-                            Add
-                        </Button>
-                    </Modal.Footer>
-                </form>
-            </Modal>
-            </div>
-
-
-
-
-
-
-
-
-
-
-<AddProduct fetchProducts={fetchProducts}/>
-      <table className=''>
+      {/* Product Table */}
+      <div className='table-container'>
+  
+      <table className='table'>
         <thead>
-          <tr>
+          <tr className='bg-info'>
             <th>Image</th>
             <th>Name</th>
             <th>Short Description</th>
@@ -168,28 +80,54 @@ const ProductList = () => {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody className=''>
-          {products.map((product) => (
+        <tbody>
+          {currentProducts.map((product) => (
             <tr key={product.id}>
-              <td><img src={product.image} alt={product.name} /></td>
-              <td className='px-3' style={{width: "200px", textAlign: "left"}}>{product.name}</td>
-              <td className='px-3' style={{width: "300px", textAlign: "left"}}>{product.shortDescription}</td>
+              <td>
+                <img src={product.image}  />
+              </td>
+              <td>{product.name}</td>
+              <td>{product.shortDescription}</td>
               <td>₹ {product.price}</td>
               <td>
-                <button onClick={()=>setSelectedProduct({
-                 product : product,
-                 id : product.id
-                },
-            handleShow()
-                  )}>Edit</button>
-                <button onClick={() => handleDelete(product.id)}>Delete</button>
-                <button>Details</button>
+                <button
+                  className='btn btn-warning mx-1'
+                  onClick={() => handleEdit(product)}
+                >
+                  Edit
+                </button>
+                <button
+                  className='btn btn-danger mx-1'
+                  onClick={() => handleDelete(product.id)}
+                >
+                  Delete
+                </button>
+               
+                
+                <Link to={"product-detail"} className='btn btn-primary mx-1'>Details</Link>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <button onClick={()=>{}}></button>
+      </div>
+      
+
+      {/* Pagination */}
+      <ul className='pagination'>
+        {Array(Math.ceil(products.length / productsPerPage))
+          .fill()
+          .map((_, index) => (
+            <li key={index} className='page-item'>
+              <button
+                className='page-link'
+                onClick={() => paginate(index + 1)}
+              >
+                {index + 1}
+              </button>
+            </li>
+          ))}
+      </ul>
     </div>
   );
 };

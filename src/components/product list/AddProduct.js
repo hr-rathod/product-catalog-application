@@ -9,11 +9,6 @@ import axios from 'axios';
 
 function AddProduct(props) {
     const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-
     const [name, setName] = useState("");
     const [shortDescription, setShortDescription] = useState("");
     const [description, setDescription] = useState("");
@@ -21,6 +16,8 @@ function AddProduct(props) {
     const [imageURL, setImageURl] = useState("");
     const [rating, setRating] = useState("");
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const handleAddProduct = () => {
         console.log("Clicked")
@@ -41,88 +38,95 @@ function AddProduct(props) {
 
     return (
         <>
-    
-        <Button className='modal-btn' variant="primary" onClick={handleShow}>
+
+            <Button className='modal-btn' variant="success" onClick={handleShow}>
                 Add New Product
             </Button>
-        
-       
-
 
             <div>
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Add New Product</Modal.Title>
-                </Modal.Header>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Add New Product</Modal.Title>
+                    </Modal.Header>
 
-                <form className='form-group'>
-                    <Modal.Body>
+                    <form onSubmit={handleAddProduct}>
+                        <Modal.Body>
 
 
-                        <label for="name">Product Name</label>
-                        <input
-                            type='text'
-                            id='name'
-                            className='form-control'
-                            placeholder='Name'
-                            onChange={(e) => { setName(e.target.value) }}
-                        />
+                            <label for="name">Product Name</label>
+                            <input
+                                type='text'
+                                id='name'
+                                className='form-control'
+                                required 
+                                placeholder='Enter ProductName'
+                                onChange={(e) => { setName(e.target.value) }}
+                            />
 
-                        <label for="shortDescrip">Product Short Description</label>
-                        <input
-                        type='text'
-                            id='shortDescrip'
-                            className='form-control'
-                            placeholder='Enter Short Description'
-                            onChange={(e) => { setShortDescription(e.target.value) }}
-                        />
+                            <label for="shortDescrip">Product Short Description</label>
+                            <input
+                                type='text'
+                                id='shortDescrip'
+                                className='form-control'
+                                required
+                                placeholder='Enter Short Description'
+                                onChange={(e) => { setShortDescription(e.target.value) }}
+                            />
 
-                        <label for="Descrip">Product Description</label>
-                        <textarea
-                        type='text'
-                            id='Descrip'
-                            className='form-control'
-                            placeholder='Enter Description'
-                            onChange={(e) => { setDescription(e.target.value) }}
-                        />
+                            <label for="Descrip">Product Description</label>
+                            <textarea
+                                required
+                                type='text'
+                                id='Descrip'
+                                className='form-control'
+                                placeholder='Enter Description'
+                                onChange={(e) => { setDescription(e.target.value) }}
+                            />
 
-                        <label for="price">Product Price</label>
-                        <input
-                            id='price'
-                            className='form-control'
-                            placeholder='Enter Price'
-                            onChange={(e) => { setPrice(e.target.value) }}
-                        />
+                            <label for="price">Product Price</label>
+                            <input
+                                type='number'
+                                id='price'
+                                className='form-control'
+                                placeholder='Enter Price'
+                                required
+                                onChange={(e) => { setPrice(e.target.value) }}
+                            />
 
-                        <label for="img">Product Image URl</label>
-                        <input
-                            id='img'
-                            className='form-control'
-                            placeholder='Enter Image URl'
-                            onChange={(e) => { setImageURl(e.target.value) }}
-                        />
+                            <label for="img">Product Image URl</label>
+                            <input
+                                type='text'
+                                id='img'
+                                className='form-control'
+                                placeholder='Enter Image URl'
+                                required
+                                onChange={(e) => { setImageURl(e.target.value) }}
+                            />
 
-                        <label for="rating">Product Rating</label>
-                        <input
-                            id='rating'
-                            className='form-control'
-                            placeholder='Enter Rating'
-                            onChange={(e) => { setRating(e.target.value) }}
-                        />
-                    </Modal.Body>
-                    <Modal.Footer>
-                       
-                        <Button style={{width: "150px"}} variant="success" onClick={handleAddProduct}>
-                            Add
-                        </Button>
-                    </Modal.Footer>
-                </form>
-            </Modal>
+                            <label for="rating">Product Rating</label>
+                            <input
+
+                                id='number'
+                                className='form-control'
+                                placeholder='Enter Rating'
+                                required
+                                onChange={(e) => { setRating(e.target.value) }}
+                            />
+
+
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button type="submit " style={{ width: "150px" }} variant="success" >
+                                Add
+                            </Button>
+                        </Modal.Footer>
+                    </form>
+                </Modal>
             </div>
         </>
-      
-            
-      
+
+
+
     )
 }
 
